@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+>
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/speedUnit"
+		android:layout_margin="5px"
+		android:textSize="20sp"
+	></TextView>
+	<RelativeLayout
+		android:orientation="horizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+	>
+		<!-- 单位单选框 -->
+		<RadioGroup
+			android:orientation="horizontal"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/speedUnitRadioGroup"
+		>
+			<RadioButton
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:id="@+id/speedUnitM"
+				android:text="@string/speedUnitMS"
+				android:layout_margin="5px" />
+			<RadioButton
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:id="@+id/speedUnitKM"
+				android:text="@string/speedUnitKMH"
+				android:layout_margin="5px" />
+		</RadioGroup>
+	</RelativeLayout>
+	<RelativeLayout
+		android:orientation="horizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+	>
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/refreshTime"
+			android:layout_marginLeft="10px"
+			android:layout_marginRight="10px"
+			android:textSize="20sp"
+		></TextView>
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:textSize="20sp"
+			android:layout_marginLeft="10px"
+			android:layout_marginRight="20px"
+			android:id="@+id/setRrefreshTime"
+		></TextView>
+	</RelativeLayout>
+	<SeekBar
+		android:id="@+id/refreshTimeSeekBar"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="15px"
+		android:layout_marginRight="15px"
+		android:layout_marginTop="5px"
+		android:layout_marginBottom="20px"
+	></SeekBar>
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+	>
+		<Button
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="@string/Sava"
+			android:id="@+id/speedSaveSettingBtn"
+		></Button>
+		<Button
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="@string/Back"
+			android:id="@+id/speedBackSettingBtn"
+		></Button>
+	</LinearLayout>
+</LinearLayout>
+
