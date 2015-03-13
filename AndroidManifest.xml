@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.Jerry.GPSApp"
+	android:versionCode="1"
+	android:versionName="1.1.110622"
+>
+	<application
+		android:icon="@drawable/icon"
+		android:label="@string/app_name"
+		android:launchMode="singleInstance"
+		android:description="@string/aboutAuthor"
+	>
+		<uses-library
+			android:name="android.test.runner" />
+		<activity
+			android:name="com.Jerry.GPSmain.MainActivity"
+			android:label="@string/app_name"
+		>
+			<intent-filter>
+				<action
+					android:name="android.intent.action.MAIN" />
+				<category
+					android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name="com.Jerry.GPSSpeed.GPSSpeedActivity"
+			android:label="@string/helloSpeed"
+		>
+		</activity>
+		<activity
+			android:name="com.Jerry.GPSSpeed.SpeedSettingActivity"
+			android:label="@string/setting"
+		>
+		</activity>
+		<activity
+			android:name="com.Jerry.GPSArea.GPSAreaActivity"
+			android:label="@string/helloArea"
+		>
+		</activity>
+		<activity
+			android:name="com.Jerry.GPSArea.AreaSettingActivity"
+			android:label="@string/setting"
+		>
+		</activity>
+		<activity
+			android:name="com.Jerry.GPSArea.ShowRecordActivity"
+			android:label="@string/showRecord"
+		>
+		</activity>
+		<service
+			android:enabled="true"
+			android:name="com.Jerry.GPSService.GPSDataService"
+		>
+		</service>
+	</application>
+	<uses-permission
+		android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission
+		android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission
+		android:name="android.permission.ACCESS_GPS" />
+	<uses-permission
+		android:name="android.permission.ACCESS_LOCATION" />
+	<uses-sdk
+		android:minSdkVersion="8" />
+	<instrumentation
+		android:name="android.test.InstrumentationTestRunner"
+		android:targetPackage="com.Jerry.GPSArea"
+		android:label="Tests For My App" />
+</manifest> 
